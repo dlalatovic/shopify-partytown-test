@@ -534,6 +534,7 @@
         void 0 !== mainWindow[cstrName] && $interfaces$.push([ cstrName, "Object", Object.keys(mainWindow[cstrName].prototype).map((propName => [ propName, 6 ])), 12 ]);
     };
     let worker;
+    console.log(worker);
     (receiveMessage => {
         const swContainer = window.navigator.serviceWorker;
         return swContainer.getRegistration().then((swRegistration => {
@@ -548,6 +549,7 @@
                 name: "Partytown 🎉"
             });
             worker.onmessage = ev => {
+                console.log(ev);
                 const msg = ev.data;
                 12 === msg[0] ? mainAccessHandler(worker, msg[1]) : onMessageHandler(worker, msg);
             };
