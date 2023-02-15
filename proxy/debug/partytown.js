@@ -3,7 +3,7 @@
     function ready() {
         if (!isReady) {
             isReady = 1;
-            libPath = (config.lib || "/~partytown/") + (false !== config.debug ? "debug/" : "");
+            libPath = (config.lib || "/a/partytown/") + (false !== config.debug ? "debug/" : "");
             if ("/" == libPath[0]) {
                 scripts = doc.querySelectorAll('script[type="text/partytown"]');
                 if (top != win) {
